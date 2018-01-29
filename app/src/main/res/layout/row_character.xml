@@ -31,4 +31,14 @@
         android:layout_below="@+id/pseudo1"
         tools:text="Texte de mon tweet" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/text1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Voir plus" />
+
 </RelativeLayout>
