@@ -32,7 +32,22 @@
         <activity
             android:name=".InternetActivity"
             android:parentActivityName=".TabActivity" />
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="notes.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="matthieu.app" />
+
         <activity android:name=".DisplayDescription" />
+        <activity android:name=".AddNoteActivity" />
     </application>
 
 </manifest>

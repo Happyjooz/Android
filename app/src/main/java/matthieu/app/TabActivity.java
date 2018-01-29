@@ -140,6 +140,9 @@ public class TabActivity extends AppCompatActivity {
                 case 2:
                     Tab3Planets tab3 = new Tab3Planets();
                     return tab3;
+                case 3:
+                    Tab4Note tab4 = new Tab4Note();
+                    return tab4;
                 default:
                     return null;
             }
@@ -147,8 +150,8 @@ public class TabActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 4 total pages.
+            return 4;
         }
 
         @Override
@@ -157,9 +160,11 @@ public class TabActivity extends AppCompatActivity {
                 case 0:
                     return "Episodes";
                 case 1:
-                    return "Personnages";
+                    return "Perso";
                 case 2:
                     return "Planètes";
+                case 3:
+                    return "Notes";
             }
             return null;
         }
