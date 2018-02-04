@@ -8,11 +8,13 @@ public class Character {
     private int img;
     private String pseudo;
     private String text;
+    private String desc;
 
-    public Character(int img, String pseudo, String text) {
+    public Character(int img, String pseudo, String text, String desc) {
         this.img = img;
         this.pseudo = pseudo;
         this.text = text;
+        this.desc = desc;
     }
 
 
@@ -36,5 +38,13 @@ public class Character {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }
