@@ -33,7 +33,7 @@ public class AddNoteActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_clear_24dp);
 
-        getSupportActionBar().setTitle("Add new note");
+        getSupportActionBar().setTitle("Ajouter une nouvelle note");
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

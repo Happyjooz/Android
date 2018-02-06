@@ -41,7 +41,6 @@ public class Tab4Note extends Fragment {
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.main_list);
         fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
-        adapter = new NotesAdapter(getActivity(), notes);
         StaggeredGridLayoutManager gridLayoutManager =
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         gridLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
@@ -56,6 +55,8 @@ public class Tab4Note extends Fragment {
         if (initialCount >= 0) {
 
             notes = Note.listAll(Note.class);
+
+            adapter = new NotesAdapter(getActivity(), notes);
             recyclerView.setAdapter(adapter);
 
             if (notes.isEmpty())
