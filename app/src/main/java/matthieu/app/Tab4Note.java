@@ -160,8 +160,6 @@ public class Tab4Note extends Fragment {
         final long newCount = Note.count(Note.class);
 
         if (newCount > initialCount) {
-            // A note is added
-            Log.d("Main", "Adding new note");
 
             // Just load the last added note (new)
             Note note = Note.last(Note.class);

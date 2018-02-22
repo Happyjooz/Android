@@ -69,38 +69,24 @@ public class AddNoteActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Add note to DB
-
                 String newTitle = etTitle.getText().toString();
                 String newDesc = etDesc.getText().toString();
                 long newTime = System.currentTimeMillis();
 
-
-                /**
-                 * TODO: Check if note exists before saving
-                 */
                 if (!editingNote) {
-                    Log.d("Note", "saving");
                     Note note = new Note(newTitle, newDesc, newTime);
                     note.save();
                 } else {
-                    Log.d("Note", "updating");
 
-//                    List<Note> notes = Note.findWithQuery(Note.class, "where title = ?", title);
                     List<Note> notes = Note.find(Note.class, "title = ?", title);
                     if (notes.size() > 0) {
-
                         Note note = notes.get(0);
-                        Log.d("got note", "note: " + note.title);
                         note.title = newTitle;
                         note.note = newDesc;
                         note.time = newTime;
-
                         note.save();
-
                     }
-
                 }
-
                 finish();
 
 

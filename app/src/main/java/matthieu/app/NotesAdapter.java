@@ -22,9 +22,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteVH> {
     public NotesAdapter(Context context, List<Note> notes) {
         this.context = context;
         this.notes = notes;
-
     }
-
 
     @Override
     public NoteVH onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,10 +33,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteVH> {
 
     @Override
     public void onBindViewHolder(NoteVH holder, int position) {
-
         holder.title.setText(notes.get(position).getTitle());
         holder.note.setText(notes.get(position).getNote());
-
     }
 
     @Override
